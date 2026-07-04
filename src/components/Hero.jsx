@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <section className="bg-slate-100 py-24 px-8">
@@ -13,9 +15,12 @@ function Hero() {
         </p>
 
         <div className="mt-10 flex justify-center gap-6">
-          <button className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700">
+          <Link
+            to="/upload"
+            className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700"
+          >
             Analyze Resume
-          </button>
+          </Link>
 
           <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50">
             Learn More

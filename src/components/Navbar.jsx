@@ -1,30 +1,57 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="flex items-center justify-between px-10 py-5 bg-white shadow-md">
       {/* Logo */}
-      <div>
-        <h1 className="text-3xl font-bold text-blue-600">
+        <div>
+        <Link to="/" className="text-3xl font-bold text-blue-600">
           Resume Review AI
-        </h1>
-      </div>
+        </Link>
+        </div>
 
-      {/* Menu */}
+      {/* Navigation Menu */}
       <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
-        <li className="cursor-pointer hover:text-blue-600">Home</li>
-        <li className="cursor-pointer hover:text-blue-600">Features</li>
-        <li className="cursor-pointer hover:text-blue-600">About</li>
-        <li className="cursor-pointer hover:text-blue-600">Contact</li>
+        <li>
+          <Link to="/" className="hover:text-blue-600">
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" className="hover:text-blue-600">
+            Features
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" className="hover:text-blue-600">
+            About
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" className="hover:text-blue-600">
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Buttons */}
       <div className="flex gap-4">
-        <button className="px-5 py-2 border border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50">
+        <Link
+          to="/login"
+          className="px-5 py-2 border border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50"
+        >
           Login
-        </button>
+        </Link>
 
-        <button className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <Link
+          to="/signup"
+          className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        >
           Sign Up
-        </button>
+        </Link>
       </div>
     </nav>
   );
