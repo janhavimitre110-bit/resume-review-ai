@@ -1,9 +1,22 @@
-function Login() {
+import Sidebar from "../components/dashboard/Sidebar";
+import Topbar from "../components/dashboard/Topbar";
+import StatCard from "../components/dashboard/StatCard";
+import RecentResumes from "../components/dashboard/RecentResumes";
+import QuickActions from "../components/dashboard/QuickActions";
+
+function Dashboard() {
   return (
-    <div className="min-h-screen flex items-center justify-center text-4xl font-bold">
-      Dashboard Page
+    <div className="flex bg-slate-100 min-h-screen">
+      <Sidebar />
+
+      <div className="flex-1 p-8">
+        <Topbar />
+        <StatCard />
+        <RecentResumes />
+        <QuickActions />
+      </div>
     </div>
   );
 }
 
-export default Login;
+export default Dashboard;

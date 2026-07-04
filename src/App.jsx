@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import UploadResume from "./pages/UploadResume";
 import Analysis from "./pages/Analysis";
 import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/upload" element={<UploadResume />} />
       <Route path="/analysis" element={<Analysis />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/settings" element={<Settings />} />
     </Routes>
   );
 }
